@@ -1,0 +1,129 @@
+/* FORM */
+
+.x-form {
+  justify-content: space-between;
+}
+.form-box {
+  display: flex;
+  font-size: var(--fxmd);
+}
+
+.form-box.column {
+  flex-direction: column;
+}
+
+.v-input__slot {
+  height: 38px;
+  border: 1px solid var(--greyDark);
+  box-sizing: border-box;
+}
+
+.v-text-field--filled.v-input--dense.v-text-field--single-line
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--filled.v-input--dense.v-text-field--outlined
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--filled.v-input--dense.v-text-field--outlined.v-text-field--filled
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--full-width.v-input--dense.v-text-field--single-line
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--full-width.v-input--dense.v-text-field--outlined
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--full-width.v-input--dense.v-text-field--outlined.v-text-field--filled
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--outlined.v-input--dense.v-text-field--single-line
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--outlined.v-input--dense.v-text-field--outlined
+  > .v-input__control
+  > .v-input__slot,
+.v-text-field--outlined.v-input--dense.v-text-field--outlined.v-text-field--filled
+  > .v-input__control
+  > .v-input__slot {
+  min-height: 38px;
+}
+
+.v-text-field--outlined fieldset {
+  border: none;
+}
+
+.v-text-field fieldset {
+  display: none;
+}
+
+.form-box > p:first-child {
+  width: 120px;
+  height: 38px;
+  line-height: 38px;
+  margin-bottom: 0%;
+  flex-shrink: 0;
+}
+
+.form-box > p:first-child span {
+  line-height: 1.1;
+  display: block;
+}
+
+.v-application .form-box .primary--text {
+  color: transparent !important;
+  caret-color: transparent !important;
+}
+
+.v-input--selection-controls {
+  margin: 0;
+  padding: 0;
+}
+
+.v-input--checkbox .v-input__slot {
+  border: none;
+}
+
+.v-application .primary--text.v-input--checkbox .mdi-checkbox-marked {
+  color: var(--blue) !important;
+}
+
+.v-textarea .v-input__slot {
+  height: auto;
+}
+
+.v-input--is-disabled .v-input__slot {
+  background-color: var(--whiteFlash) !important;
+}
+/* FORM */
+
+@media screen and (max-width: 1445px) {
+  .x-form {
+    flex-wrap: wrap;
+  }
+  .x-form .w-33p {
+    width: 48%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .x-form {
+    flex-direction: column;
+  }
+  .x-form .w-33p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .form-box > p:first-child {
+    width: 75px;
+    font-size: var(--fxs);
+    padding-right: 5px;
+  }
+  .form-box .w-52p,
+  .form-box .w-32p,
+  .form-box .w-18p {
+    width: auto;
+    flex: 1;
+  }
+}

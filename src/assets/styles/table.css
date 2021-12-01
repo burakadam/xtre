@@ -1,0 +1,162 @@
+/* TABLE */
+.v-data-table-header th span {
+  font-size: var(--fxs);
+  font-family: 'Avenir-Black';
+  text-transform: capitalize;
+  color: var(--blueDark);
+}
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > th,
+.v-data-table > .v-data-table__wrapper > table > tfoot > tr > th,
+.v-data-table > .v-data-table__wrapper > table > tbody > tr > td,
+.v-data-table > .v-data-table__wrapper > table > tfoot > tr > td {
+  height: 36px;
+}
+
+.v-data-table > .v-data-table__wrapper > table > thead > tr > td,
+.v-data-table > .v-data-table__wrapper > table > thead > tr > th {
+  height: 30px;
+}
+
+.v-data-table tbody tr:nth-of-type(2n + 1) {
+  background-color: var(--blueLight);
+}
+
+.theme--light.v-data-table
+  > .v-data-table__wrapper
+  > table
+  > tbody
+  > tr:not(:last-child)
+  > td:not(.v-data-table__mobile-row),
+.theme--light.v-data-table
+  > .v-data-table__wrapper
+  > table
+  > tbody
+  > tr:not(:last-child)
+  > th:not(.v-data-table__mobile-row),
+.theme--light.v-data-table
+  > .v-data-table__wrapper
+  > table
+  > thead
+  > tr:last-child
+  > th {
+  border-bottom: none;
+}
+
+.table-div .elevation-1 {
+  box-shadow: none !important;
+}
+
+.table-div .v-data-table-header th.sortable .v-data-table-header__icon {
+  display: none;
+}
+/* TABLE */
+
+/* DIVTABLE */
+
+.table-div {
+  width: 100%;
+  position: relative;
+}
+
+.table-div__container {
+  width: 100%;
+  overflow-y: auto;
+}
+
+.table-div .fake-div {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.table-div .mainDiv {
+  padding: 0 !important;
+  width: 1302px;
+}
+
+.table-div .fake-div > div {
+  text-align: center;
+}
+
+.table-header.partialDiv {
+  height: auto !important;
+}
+.table-header p,
+.table-div .fake-div > div:first-child p {
+  font-size: var(--fxs);
+  font-family: 'Avenir-Black';
+  margin-bottom: 12px !important;
+  color: var(--greyDark);
+}
+
+.table-div .fake-div p {
+  font-size: var(--fsm) !important;
+}
+
+.table-div .fake-div.small p {
+  font-size: var(--fxxs) !important;
+}
+
+.partialDiv.table-first {
+  width: 190px !important;
+}
+.partialDiv.table-first p,
+.table-div .fake-div > div:not(:first-child) p {
+  color: var(--greyDark);
+  font-size: var(--fxxs);
+  padding: 0 0.5em;
+  text-align: center;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+}
+
+.table-div .partialDiv:not(.table-header),
+.table-div .fake-div > div:not(:first-child) {
+  font-size: var(--fxxs);
+  height: 36px;
+  line-height: 36px;
+}
+
+.table-div .fake-div > div {
+  height: 30px;
+  line-height: 30px;
+}
+
+.table-div .fake-div > div:first-child p {
+  line-height: 1.5;
+}
+
+.table-div .partialDiv:not(.table-header) p {
+  margin-bottom: 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.table-div .partialDiv:not(.table-header) {
+  border-right: 1px solid var(--greyExtraLight);
+}
+
+.table-div .partialDiv input {
+  width: 100% !important;
+}
+
+.table-div .partialDiv.color {
+  background-color: var(--purpleLight);
+}
+
+.table-div .partialDiv.color:nth-of-type(2n + 1),
+.table-div .fake-div div:not(.first-child):nth-child(2n + 2) {
+  background-color: var(--purpleExtraLight);
+}
+
+.table-div.no-wrap td {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* DIVTABLE */

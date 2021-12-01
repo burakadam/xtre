@@ -1,0 +1,39 @@
+/* BUTTON */
+.v-btn {
+  box-shadow: none !important;
+  text-transform: none;
+  height: 38px !important;
+}
+.v-btn.v-btn--icon {
+  border-radius: 5px;
+}
+.v-btn.v-btn--icon.small {
+  width: 25px;
+}
+.v-btn.v-btn--icon.small i {
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--blueDark);
+}
+.v-btn span {
+  font-family: 'Avenir-Heavy';
+  font-size: var(--fxs);
+}
+.v-btn--outlined {
+  border: 1px solid currentColor;
+}
+.theme--light.v-btn {
+  color: var(--blueDark);
+}
+.theme--light.v-btn.v-btn--has-bg {
+  background-color: var(--blueDark);
+}
+.theme--light.v-btn.v-btn--has-bg span {
+  color: var(--white);
+}
+.v-btn i {
+  font-size: 16px;
+  margin: 0 3px;
+}
+
+/* BUTTON */

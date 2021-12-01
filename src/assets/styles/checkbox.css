@@ -1,0 +1,46 @@
+.x-checkbox p {
+  font-size: var(--fxmd);
+  margin-bottom: 0 !important;
+}
+
+.x-checkbox > div:first-child,
+.x-checkbox__files div {
+  height: 38px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.x-checkbox > div:first-child > * {
+  pointer-events: none;
+}
+
+.x-checkbox > div:first-child i {
+  font-size: 18px;
+  margin-left: 1em;
+  color: var(--blueDark);
+}
+
+.x-checkbox > div:first-child input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  pointer-events: all;
+  cursor: pointer;
+}
+.x-checkbox__files div {
+  width: 100%;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--greyLight);
+  padding-right: 1em;
+}
+
+.x-checkbox__files div p {
+  flex: 1;
+  padding-right: 1em;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}

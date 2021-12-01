@@ -1,0 +1,12 @@
+.x-date-picker > div {
+  height: 38px;
+  line-height: 38px;
+  border: 1px solid var(--greyDark);
+  box-sizing: border-box;
+  padding: 0 12px;
+  border-radius: 5px;
+}
+
+.x-date-picker > div input {
+  height: 38px;
+}

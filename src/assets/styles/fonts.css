@@ -1,0 +1,58 @@
+:root {
+  --fxxxs: 10px;
+  --fxxs: 11px;
+  --fxs: 12px;
+  --fsm: 13px;
+  --fxmd: 14px;
+  --fmd: 15px;
+}
+
+@font-face {
+  font-family: 'Avenir-Medium';
+  src: url('../fonts/Avenir-Medium.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir-Roman';
+  src: url('../fonts/Avenir-Roman.woff2') format('woff2'),
+    url('../fonts/Avenir-Roman.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir-Heavy';
+  src: url('../fonts/Avenir-Heavy.woff2') format('woff2'),
+    url('../fonts/Avenir-Heavy.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Avenir-Black';
+  src: url('../fonts/Avenir-Black.woff2') format('woff2'),
+    url('../fonts/Avenir-Black.woff') format('woff');
+}
+
+* {
+  font-family: 'Avenir-Roman', Helvetica, sans-serif;
+}
+
+.fxxxs {
+  font-size: var(--fxxxs);
+}
+.fxxs {
+  font-size: var(--fxxs);
+}
+.fxs {
+  font-size: var(--fxs);
+}
+.fsm {
+  font-size: var(--fsm);
+}
+.fxmd {
+  font-size: var(--fxmd);
+}
+.fmd {
+  font-size: var(--fmd);
+}
+
+.fbold {
+  font-weight: bold;
+}

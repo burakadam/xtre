@@ -1,0 +1,14 @@
+:root {
+  --white: #fff;
+  --black: #000;
+  --blue: #0072ff;
+  --blueLight: #e5e9f9;
+  --blueDark: #003462;
+  --greyDark: #3e4a5a;
+  --greyLight: #979797;
+  --greyExtraLight: rgba(62, 74, 90, 0.1);
+  --whiteFlash: #eff2f8;
+  --purpleLight: rgba(219, 226, 239, 1);
+  --purpleExtraLight: rgba(219, 226, 239, 0.7);
+  --lightSteelBlue: #b0bfeb;
+}

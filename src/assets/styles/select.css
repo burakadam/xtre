@@ -1,0 +1,107 @@
+.select2-container,
+.select2-container .selection,
+.select2-container .select2-selection,
+.select2-selection__rendered {
+  height: 38px !important;
+}
+
+.smaller-select .select2-container,
+.smaller-select .select2-container .selection,
+.smaller-select .select2-container .select2-selection,
+.smaller-select .select2-selection__rendered {
+  height: 27px !important;
+}
+
+.select2-selection__rendered {
+  line-height: 38px !important;
+}
+
+.smaller-select .select2-selection__rendered {
+  line-height: 27px !important;
+}
+
+.select-font-bold
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  font-size: 0.87rem;
+}
+
+.smaller-select
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  font-size: 0.68rem;
+}
+
+.select2-container--default
+  .select2-selection--multiple
+  .select2-selection__choice {
+  margin-top: 3px;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+}
+
+.select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  color: var(--black);
+}
+
+.select-font-bold
+  .select2-container--default
+  .select2-selection--single
+  .select2-selection__rendered {
+  font-weight: bold;
+}
+
+.select2-container .select2-selection {
+  padding: 0 0.4rem;
+}
+
+.smaller-select .select2-container .select2-selection {
+  padding: 0 0.2rem;
+}
+
+.select2-selection__arrow b {
+  display: none;
+}
+
+.select2-selection__arrow {
+  height: 100% !important;
+  margin-right: 0.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.select2-selection__arrow:after {
+  content: '\f053';
+  font-family: 'Font Awesome 5 Pro';
+  font-size: 15px;
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+  color: var(--blueDark);
+  transform: rotate(-90deg);
+}
+
+.smaller-select .select2-selection__arrow {
+  margin-right: 0.1rem;
+}
+
+.smaller-select .select2-selection__arrow:after {
+  color: var(--greyDark);
+  font-size: 11px;
+}
+
+.select2-container .select2-container-dropdown,
+.select2-dropdown {
+  width: auto;
+  min-width: 100%;
+}
+
+.select2-results__option {
+  font-size: 0.8rem;
+}
