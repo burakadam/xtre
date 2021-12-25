@@ -1,0 +1,6 @@
+.day-container {
+  font-size: var(--fxxs);
+}
+.day-box {
+  width: 40px;
+}

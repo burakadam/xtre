@@ -52,9 +52,6 @@ export default {
 #content > div {
   width: 100%;
 }
-#x-content {
-  padding-left: 12px;
-}
 
 @media screen and (max-width: 768px) {
   #x-content {

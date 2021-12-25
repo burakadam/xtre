@@ -28,7 +28,7 @@ textarea:focus {
 }
 
 body {
-  margin: var(--sxxl);
+  margin: var(--sxl);
 }
 
 .w-61 {
@@ -141,7 +141,7 @@ body {
 } */
 
 .footer-button-box {
-  margin-top: 33px;
+  margin-top: 14px;
 }
 .footer-button-box > div {
   flex-wrap: wrap;
@@ -214,13 +214,38 @@ body::-webkit-scrollbar-track {
   margin-right: 0.9rem;
 }
 
-.two-sides__right__item p {
+.two-sides__right__item p,
+.two-sides__right__item h4 {
   margin-bottom: 0;
   margin-right: 0.8rem;
 }
 
 .two-sides .x-select-box + .x-select-box {
   margin-left: 0.6rem;
+}
+
+.small.x-date-picker > div,
+.x-date-picker.small > div input {
+  height: 27px;
+  line-height: 27px;
+  font-size: 0.68rem;
+}
+
+.status-box {
+  height: 27px;
+  line-height: 27px;
+  font-size: 0.68rem;
+  background-color: #e4e4e4;
+  border: 1px solid #c8c9cc;
+  border-radius: 3px;
+  text-transform: capitalize;
+  padding: 0 17px;
+}
+
+@media screen and (max-width: 1500px) {
+  body {
+    margin: var(--sxxl);
+  }
 }
 
 @media screen and (max-width: 1200px) {

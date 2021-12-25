@@ -1,6 +1,6 @@
 <template>
   <div class="shadow-content">
-    <div class="shadow-content__header">
+    <div :class="`shadow-content__header ${isBigger ? 'big' : ''}`">
       <div v-if="title" class="shadow-content__header__title">
         <i v-if="titleIcon" :class="titleIcon"> </i>
         <h4 v-if="title">{{ this.GetLabel(this, title) }}</h4>
@@ -29,6 +29,10 @@ export default {
     },
     linkText: {
       type: String
+    },
+    isBigger: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -55,9 +59,18 @@ export default {
   text-transform: capitalize;
 }
 .shadow-content__header__title i {
-  font-size: 28px;
+  font-size: 18px;
   margin-right: 0.4em;
 }
+.big .shadow-content__header__title i {
+  font-size: 28px;
+  margin-left: 1em;
+}
+
+.big .shadow-content__header__title i + h4 {
+  margin-bottom: 0.5em;
+}
+
 .shadow-content__content {
   padding: 32px 17px;
   border-radius: 20px;
@@ -65,13 +78,13 @@ export default {
 }
 @media screen and (max-width: 1024px) {
   .shadow-content__header__title i {
-    font-size: 18px;
+    font-size: 16px;
   }
 }
 
 @media screen and (max-width: 600px) {
   .shadow-content.full-m .shadow-content__content {
-        padding: 32px 0px;
+    padding: 32px 0px;
   }
 }
 </style>

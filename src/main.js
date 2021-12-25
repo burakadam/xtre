@@ -23,6 +23,7 @@ import './assets/styles/pagination.css'
 import './assets/styles/datepicker.css'
 import './assets/styles/checkbox.css'
 import './assets/styles/select.css'
+import './assets/styles/timesheet.css'
 import './assets/styles/styles.css'
 
 /* ---------- ui implementation --------- */

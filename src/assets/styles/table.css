@@ -1,6 +1,6 @@
 /* TABLE */
 .v-data-table-header th span {
-  font-size: var(--fxs);
+  font-size: 12px;
   font-family: 'Avenir-Black';
   text-transform: capitalize;
   color: var(--blueDark);
@@ -74,7 +74,9 @@
 
 .table-div .mainDiv {
   padding: 0 !important;
-  width: 1302px;
+  /* width: 1302px; */
+  width: 100%;
+  min-width: 934px;
 }
 
 .table-div .fake-div > div {
@@ -106,7 +108,7 @@
 .partialDiv.table-first p,
 .table-div .fake-div > div:not(:first-child) p {
   color: var(--greyDark);
-  font-size: var(--fxxs);
+  font-size: 11px;
   padding: 0 0.5em;
   text-align: center;
   line-height: 1;
@@ -117,7 +119,7 @@
 
 .table-div .partialDiv:not(.table-header),
 .table-div .fake-div > div:not(:first-child) {
-  font-size: var(--fxxs);
+  font-size: 11px;
   height: 36px;
   line-height: 36px;
 }
@@ -157,6 +159,35 @@
 .table-div.no-wrap td {
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 1400px) {
+  .table-div .partialDiv:not(.table-header),
+  .table-div .fake-div > div:not(:first-child),
+  .table-div .partialDiv:not(.table-header),
+  .table-div .fake-div > div:not(:first-child) {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .table-div .partialDiv:not(.table-header),
+  .table-div .fake-div > div:not(:first-child),
+  .table-div .partialDiv:not(.table-header),
+  .table-div .fake-div > div:not(:first-child) {
+    font-size: 9px;
+  }
+
+  .table-header p,
+  .table-div .fake-div > div:first-child p,
+  .table-div .fake-div.small p {
+    font-size: 10px !important;
+  }
+
+  .table-div .fake-div > div {
+    height: 27px;
+    line-height: 27px;
+  }
 }
 
 /* DIVTABLE */

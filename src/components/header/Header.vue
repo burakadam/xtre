@@ -134,7 +134,7 @@ export default {
       projetcModel: '1',
       forecastModel: '1',
       isSearchBoxOpen: false,
-      isSelectBoxOpen: true,
+      isSelectBoxOpen: false,
       clients: [
         {
           label: 'NTS - ABC',

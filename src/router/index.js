@@ -4,6 +4,7 @@ import VueRouter from 'vue-router'
 import DefaultLayout from '@/views/layouts/default-layout'
 import FinanceLayout from '@/views/layouts/finance-layout'
 import ExpenseLayout from '@/views/layouts/expense-layout'
+import TimesheetLayout from '@/views/layouts/timesheet-layout'
 
 import Home from '@/views/home/Home'
 import Finance from '@/views/finance/Finance'
@@ -14,6 +15,8 @@ import Notifications from '@/views/notifications/Notifications'
 import ResourceManagement from '@/views/finance/ResourceManagement'
 import Expense from '@/views/expense/Expense'
 import ExpenseList from '@/views/expense/ExpenseList'
+import Timesheet from '@/views/timesheet/Timesheet'
+import TimesheetDetail from '@/views/timesheet/TimesheetDetail'
 
 Vue.use(VueRouter)
 
@@ -90,6 +93,22 @@ const routes = [
         path: '/expense/expense-list',
         name: 'ExpenseList',
         component: ExpenseList
+      }
+    ]
+  },
+  {
+    path: '/timesheet',
+    component: TimesheetLayout,
+    children: [
+      {
+        path: '/timesheet',
+        name: 'Timesheet',
+        component: Timesheet
+      },
+      {
+        path: '/timesheet/detail',
+        name: 'TimesheetDetail',
+        component: TimesheetDetail
       }
     ]
   }
