@@ -1,6 +1,56 @@
 .day-container {
   font-size: var(--fxxs);
+  margin-bottom: 10px;
+}
+
+.day-container > p {
+  font-family: 'Avenir-Black';
+  text-transform: uppercase;
 }
 .day-box {
   width: 40px;
+  margin-left: 8px;
+  text-align: center;
+}
+
+.day-box p {
+  margin-bottom: 0;
+}
+
+.day-box:first-child {
+  margin-left: 0;
+}
+
+.day-box:not(.date) {
+  height: 26px;
+  border: 1px solid #c8c9cc;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.day-box:last-child {
+  width: 61px;
+  pointer-events: none;
+}
+
+.day-box .v-input {
+  font-size: 11px;
+}
+
+.day-box .v-text-field input {
+  padding: 0;
+  text-align: center;
+}
+
+.day-box .v-text-field__details {
+  display: none;
+}
+
+.day-box .v-input__slot {
+  padding: 0;
+  height: 27px;
+  border: none;
+  background: transparent;
 }

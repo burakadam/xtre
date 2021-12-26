@@ -63,8 +63,12 @@
               {{ item.name }}
             </p>
           </div>
+          <div class="day-box date">
+            <p>{{ this.GetLabel(this, 'total') }}</p>
+          </div>
         </div>
       </div>
+      <TimesheetRow />
     </shadow-content>
   </div>
 </template>
@@ -72,10 +76,12 @@
 import SelectBox from '../../components/form/SelectBox.vue'
 import CustomDateFormatter from '@/library/helpers/customdateformatter'
 import ShadowContent from '../../components/shadow-content/ShadowContent.vue'
+import TimesheetRow from '../../components/timesheetRow/TimesheetRow.vue'
 
 export default {
   components: {
     SelectBox,
+    TimesheetRow,
     dxFormDatepickerInput: () =>
       import(
         'Customcontrols/dxInput/dxFormDatepickerInput/dxFormDatepickerInput'
