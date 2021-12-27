@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex justify-space-between">
+  <div class="d-flex justify-space-between day-content">
     <div class="d-flex tsr">
       <SelectBox
         :items="pList"
@@ -14,7 +14,11 @@
       </v-btn>
     </div>
     <div class="d-flex day-container">
-      <div v-for="(item, index) in daysData" :key="index" class="day-box">
+      <div
+        v-for="(item, index) in daysData"
+        :key="index"
+        :class="`day-box ${daysData[index].isWeekend ? 'weekend' : ''}`"
+      >
         <v-text-field :value="item.total" />
       </div>
     </div>
@@ -32,85 +36,45 @@ export default {
     },
     daysData: {
       type: Array,
-      default: [
-        {
-          total: 5,
-          details: [
-            {
-              amount: 3,
-              text: 'Genel Değerlendirme Toplantısı'
-            },
-            {
-              amount: 2,
-              text: 'Tasarım Toplantısı'
-            }
-          ]
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 5,
-          details: [
-            {
-              amount: 3,
-              text: 'Genel Değerlendirme Toplantısı'
-            },
-            {
-              amount: 2,
-              text: 'Tasarım Toplantısı'
-            }
-          ]
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 0,
-          details: []
-        },
-        {
-          total: 10
-        }
-      ]
+      default: () => {
+        return [
+          {
+            total: 0,
+            details: []
+          },
+          { total: 0, details: [] },
+          {
+            total: 0,
+            details: []
+          },
+          { total: 0, details: [] },
+          { total: 0, details: [] },
+          {
+            total: 0,
+            details: [],
+            isWeekend: true
+          },
+          { total: 0, details: [], isWeekend: true },
+          {
+            total: 0,
+            details: []
+          },
+          { total: 0, details: [] },
+          { total: 0, details: [] },
+          {
+            total: 0,
+            details: []
+          },
+          { total: 0, details: [] },
+          { total: 0, details: [], isWeekend: true },
+          {
+            total: 0,
+            details: [],
+            isWeekend: true
+          },
+          { total: 10 }
+        ]
+      }
     }
   },
   data () {
@@ -148,5 +112,14 @@ export default {
 }
 .tsr button i {
   font-size: 13px;
+}
+@media screen and (max-width: 1024px) {
+  .tsr {
+    flex: none;
+    margin-bottom: 14px;
+  }
+  .tsr > div:first-child {
+    max-width: 375px;
+  }
 }
 </style>

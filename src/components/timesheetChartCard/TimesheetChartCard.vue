@@ -53,7 +53,9 @@ export default {
   props: {
     chartData: {
       type: Object,
-      default: {}
+      default: () => {
+        return {}
+      }
     },
     chartTitle: {
       type: String,

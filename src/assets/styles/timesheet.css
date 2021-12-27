@@ -54,3 +54,29 @@
   border: none;
   background: transparent;
 }
+
+.day-box.weekend {
+  border: 1px solid #0072ff;
+  color: #0072ff;
+  pointer-events: none;
+}
+
+.day-box.weekend input {
+  color: #0072ff;
+}
+
+.day-content {
+  width: 100%;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .v-application .justify-space-between.day-content {
+    flex-direction: column;
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+  }
+  .v-application .shadow-box > .d-flex.day-container {
+    display: none !important;
+  }
+}

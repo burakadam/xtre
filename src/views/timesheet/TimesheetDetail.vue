@@ -56,19 +56,9 @@
     <shadow-content class="full-m">
       <div class="d-flex justify-space-between align-center day-container">
         <p>wbs</p>
-        <div class="d-flex">
-          <div v-for="(item, index) in days" class="day-box date">
-            <p :key="index">
-              {{ item.day }}
-              {{ item.name }}
-            </p>
-          </div>
-          <div class="day-box date">
-            <p>{{ this.GetLabel(this, 'total') }}</p>
-          </div>
-        </div>
+        <TimesheetDays :dates="days" />
       </div>
-      <TimesheetRow />
+      <TimesheetRow :daysData="row1" />
     </shadow-content>
   </div>
 </template>
@@ -77,11 +67,13 @@ import SelectBox from '../../components/form/SelectBox.vue'
 import CustomDateFormatter from '@/library/helpers/customdateformatter'
 import ShadowContent from '../../components/shadow-content/ShadowContent.vue'
 import TimesheetRow from '../../components/timesheetRow/TimesheetRow.vue'
+import TimesheetDays from '../../components/timesheetDays/TimesheetDays.vue'
 
 export default {
   components: {
     SelectBox,
     TimesheetRow,
+    TimesheetDays,
     dxFormDatepickerInput: () =>
       import(
         'Customcontrols/dxInput/dxFormDatepickerInput/dxFormDatepickerInput'
@@ -203,6 +195,42 @@ export default {
           name: this.GetLabel(this, 'sunday'),
           isWeekend: true
         }
+      ],
+      row1: [
+        {
+          total: 5,
+          details: [
+            { amount: 3, text: 'Genel Değerlendirme Toplantısı' },
+            { amount: 2, text: 'Tasarım Toplantısı' }
+          ]
+        },
+        { total: 0, details: [] },
+        {
+          total: 0,
+          details: []
+        },
+        { total: 0, details: [] },
+        { total: 0, details: [] },
+        {
+          total: 0,
+          details: [],
+          isWeekend: true
+        },
+        { total: 0, details: [], isWeekend: true },
+        {
+          total: 5,
+          details: [
+            { amount: 3, text: 'Genel Değerlendirme Toplantısı' },
+            { amount: 2, text: 'Tasarım Toplantısı' }
+          ]
+        },
+        { total: 0, details: [] },
+        { total: 0, details: [] },
+        { total: 0, details: [] },
+        { total: 0, details: [] },
+        { total: 0, details: [], isWeekend: true },
+        { total: 0, details: [], isWeekend: true },
+        { total: 10 }
       ]
     }
   }
