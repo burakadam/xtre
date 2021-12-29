@@ -11,6 +11,7 @@
   width: 40px;
   margin-left: 8px;
   text-align: center;
+  position: relative;
 }
 
 .day-box p {
@@ -67,7 +68,131 @@
 
 .day-content {
   width: 100%;
+}
 
+.inline-days {
+  display: none;
+}
+
+.day-content:nth-child(2n + 1) .x-select-box + button {
+  background-color: var(--lightSteelBlue) !important;
+}
+
+.day-box.active {
+  border: 1px solid var(--marigold);
+}
+
+.day-box-info {
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  z-index: 20;
+  background-color: var(--marigold);
+  color: #fff;
+  padding: 11px 17px;
+  padding-right: 72px;
+  border-radius: 3px;
+  text-align: left;
+  max-width: 282px;
+  display: none;
+}
+
+.day-box:nth-of-type(7) ~ .day-box .day-box-info {
+  left: auto;
+  right: -1px;
+}
+
+.day-box-info-close {
+  position: absolute;
+  right: 3px;
+  top: -1px;
+  height: 25px !important;
+}
+
+.day-box-info-close i {
+  color: #fff;
+  font-size: 11px;
+}
+
+.day-box-info p {
+  width: 100%;
+  margin-bottom: 5px;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+}
+
+.day-box-info-edit {
+  height: 22px !important;
+  float: right;
+  transform: translate3d(62px, 0, 0);
+}
+
+.v-btn.day-box-info-edit span {
+  font-size: 8px;
+}
+
+.day-box.form {
+  border: none;
+  height: auto;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  display: block;
+  padding-top: 12px;
+  height: 0;
+  overflow: hidden;
+}
+
+.day-box.form:nth-of-type(6) ~ .day-box.form .ts-form {
+  float: right;
+}
+
+.day-box.form.active {
+  height: auto;
+  overflow: visible;
+}
+
+.ts-form {
+  display: flex;
+  width: 377px;
+  margin-bottom: 9px;
+  position: relative;
+}
+
+.ts-form__text {
+  flex: 1;
+  margin-left: 10px;
+  background-color: var(--whiteFlash);
+}
+
+.ts-form__text input {
+  text-align: left;
+}
+
+.day-box .ts-form__text .v-text-field input {
+  text-align: left;
+  padding: 0 30px 0 15px;
+  background-color: transparent;
+}
+
+.ts-form-delete {
+  position: absolute;
+  right: 0;
+  height: 27px !important;
+  width: 30px !important;
+}
+
+.ts-form-delete i {
+  font-size: 12px;
+  color: var(--marigold);
+}
+
+.ts-row-edit-btn.active {
+  background-color: var(--marigold) !important;
+}
+.ts-form:last-child .ts-form-delete {
+  display: none;
 }
 
 @media screen and (max-width: 1024px) {
@@ -78,5 +203,53 @@
   }
   .v-application .shadow-box > .d-flex.day-container {
     display: none !important;
+  }
+  .inline-days {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .inline-days + div {
+    margin-left: 0;
+  }
+  .day-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow: auto;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+  .tsr + div {
+    width: 100%;
+  }
+  .day-box {
+    flex-shrink: 0;
+  }
+  .day-content {
+    margin-bottom: 14px;
+  }
+  .day-box.form {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .day-content {
+    padding-left: 0;
+  }
+  .timesheet-days-shadow.shadow-content.full-m .shadow-content__content {
+    box-shadow: none;
+    padding: 0;
+    margin-top: 20px;
+    padding-top: 30px;
+    border-top: 1px solid var(--greyLight);
+    border-radius: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .day-box:hover .day-box-info {
+    display: block;
   }
 }

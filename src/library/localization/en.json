@@ -46,6 +46,8 @@
   "label_friday": "fri",
   "label_saturday": "sat",
   "label_total": "Total",
+  "label_add-row": "Add Row",
+  "label_submit": "Submit",
 
   "label_name": "Username",
   "label_enterprisename": "Enterprise Name",

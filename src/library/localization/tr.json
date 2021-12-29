@@ -49,6 +49,8 @@
   "label_friday": "cum",
   "label_saturday": "cmt",
   "label_total": "Toplam",
+  "label_add-row": "Sıra Ekle",
+  "label_submit": "Gönder",
 
   "label_name": "Kullanıcı Adı",
   "label_enterprisename": "Kurumsal Adı",

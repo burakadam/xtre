@@ -53,13 +53,27 @@
         </div>
       </div>
     </div>
-    <shadow-content class="full-m">
+    <shadow-content class="full-m timesheet-days-shadow">
       <div class="d-flex justify-space-between align-center day-container">
         <p>wbs</p>
         <TimesheetDays :dates="days" />
       </div>
-      <TimesheetRow :daysData="row1" />
+      <TimesheetRow :daysData="row1" :dates="days" />
+      <TimesheetRow :daysData="row1" :dates="days" />
     </shadow-content>
+
+    <div>
+      <div class="d-flex justify-space-between two-side footer-button-box">
+        <div class="two-sides__left">
+          <v-btn>
+            {{ this.GetLabel(this, 'add-row') }}
+          </v-btn>
+          <v-btn>
+            {{ this.GetLabel(this, 'submit') }}
+          </v-btn>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -199,37 +213,61 @@ export default {
       row1: [
         {
           total: 5,
+          id: 1,
           details: [
-            { amount: 3, text: 'Genel Değerlendirme Toplantısı' },
+            {
+              amount: 3,
+              text: 'Genel Değerlendirme Toplantısı Genel Değerlendirme Toplantısı'
+            },
             { amount: 2, text: 'Tasarım Toplantısı' }
           ]
         },
-        { total: 0, details: [] },
-        {
-          total: 0,
-          details: []
-        },
-        { total: 0, details: [] },
-        { total: 0, details: [] },
+        { total: 0, details: [], id: 2 },
         {
           total: 0,
           details: [],
+          id: 3
+        },
+        { total: 0, details: [], id: 4 },
+        { total: 0, details: [], id: 5 },
+        {
+          total: 0,
+          details: [],
+          id: 6,
           isWeekend: true
         },
-        { total: 0, details: [], isWeekend: true },
+
+        { total: 0, details: [], isWeekend: true, id: 7 },
         {
           total: 5,
           details: [
             { amount: 3, text: 'Genel Değerlendirme Toplantısı' },
             { amount: 2, text: 'Tasarım Toplantısı' }
-          ]
+          ],
+          id: 8
         },
-        { total: 0, details: [] },
-        { total: 0, details: [] },
-        { total: 0, details: [] },
-        { total: 0, details: [] },
-        { total: 0, details: [], isWeekend: true },
-        { total: 0, details: [], isWeekend: true },
+        { total: 0, details: [], id: 9 },
+        { total: 0, details: [], id: 10 },
+        { total: 0, details: [], id: 11 },
+        {
+          total: 0,
+          details: [
+            {
+              amount: 3,
+              text: 'Genel Değerlendirme Toplantısı Genel Değerlendirme Toplantısı'
+            },
+            { amount: 2, text: 'Tasarım Toplantısı' }
+          ],
+
+          id: 12
+        },
+        { total: 0, details: [], isWeekend: true, id: 13 },
+        {
+          total: 0,
+          details: [],
+          isWeekend: true,
+          id: 14
+        },
         { total: 10 }
       ]
     }
