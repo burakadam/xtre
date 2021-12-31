@@ -1,78 +1,91 @@
 <template>
-  <div class="d-flex flex-wrap justify-space-between">
-    <div class="w-half">
-      <ShadowContent
-        title="notifications"
-        titleIcon="fal fa-bell"
-        to="/notifications"
-        linkText="see-all"
-      >
-        <DataTable :headers="notificationHeaders" :items="notificationData">
-          <template v-slot:default="item">
-            <router-link :to="`/notifications?${item.item.id}`">
-              <i class="fal fa-edit"></i>
-            </router-link>
-          </template>
-        </DataTable>
-      </ShadowContent>
+  <div>
+    <div class="d-flex flex-wrap justify-space-between">
+      <div class="w-half">
+        <ShadowContent
+          title="notifications"
+          titleIcon="fal fa-bell"
+          to="/notifications"
+          linkText="see-all"
+        >
+          <DataTable :headers="notificationHeaders" :items="notificationData">
+            <template v-slot:default="item">
+              <router-link :to="`/notifications?${item.item.id}`">
+                <i class="fal fa-edit"></i>
+              </router-link>
+            </template>
+          </DataTable>
+        </ShadowContent>
+      </div>
+      <div class="w-half">
+        <ShadowContent
+          title="expense"
+          titleIcon="fal fa-list-alt"
+          to="/finance/forecast"
+          linkText="see-all"
+        >
+          <DataTable :headers="notificationHeaders" :items="notificationData">
+            <template v-slot:default="item">
+              <router-link :to="`/finance/forecast?${item.item.id}`">
+                <i class="fal fa-edit"></i>
+              </router-link>
+            </template>
+          </DataTable>
+        </ShadowContent>
+      </div>
+      <div class="w-half">
+        <ShadowContent
+          title="invoices"
+          titleIcon="fal fa-file-invoice"
+          to="/"
+          linkText="see-all"
+        >
+          <DataTable :headers="notificationHeaders" :items="notificationData">
+            <template v-slot:default="item">
+              <router-link :to="`/${item.item.id}`">
+                <i class="fal fa-edit"></i>
+              </router-link>
+            </template>
+          </DataTable>
+        </ShadowContent>
+      </div>
+      <div class="w-half">
+        <ShadowContent
+          title="documents"
+          titleIcon="fal fa-file-invoice"
+          to="/"
+          linkText="see-all"
+        >
+          <DataTable :headers="notificationHeaders" :items="notificationData">
+            <template v-slot:default="item">
+              <router-link :to="`/${item.item.id}`">
+                <i class="fal fa-edit"></i>
+              </router-link>
+            </template>
+          </DataTable>
+        </ShadowContent>
+      </div>
     </div>
-    <div class="w-half">
-      <ShadowContent
-        title="expense"
-        titleIcon="fal fa-list-alt"
-        to="/finance/forecast"
-        linkText="see-all"
-      >
-        <DataTable :headers="notificationHeaders" :items="notificationData">
-          <template v-slot:default="item">
-            <router-link :to="`/finance/forecast?${item.item.id}`">
-              <i class="fal fa-edit"></i>
-            </router-link>
-          </template>
-        </DataTable>
-      </ShadowContent>
-    </div>
-    <div class="w-half">
-      <ShadowContent
-        title="invoices"
-        titleIcon="fal fa-file-invoice"
-        to="/"
-        linkText="see-all"
-      >
-        <DataTable :headers="notificationHeaders" :items="notificationData">
-          <template v-slot:default="item">
-            <router-link :to="`/${item.item.id}`">
-              <i class="fal fa-edit"></i>
-            </router-link>
-          </template>
-        </DataTable>
-      </ShadowContent>
-    </div>
-    <div class="w-half">
-      <ShadowContent
-        title="documents"
-        titleIcon="fal fa-file-invoice"
-        to="/"
-        linkText="see-all"
-      >
-        <DataTable :headers="notificationHeaders" :items="notificationData">
-          <template v-slot:default="item">
-            <router-link :to="`/${item.item.id}`">
-              <i class="fal fa-edit"></i>
-            </router-link>
-          </template>
-        </DataTable>
-      </ShadowContent>
+    <div id="image-sample">
+      <h4>Örnek görseller</h4>
+      <image-viewer :images="images" />
     </div>
   </div>
 </template>
 <script>
 import ShadowContent from '../../components/shadow-content/ShadowContent'
 import DataTable from '../../components/data-table/DataTable'
+import ImageViewer from '../../components/imageViewer/ImageViewer.vue'
 export default {
-  components: { ShadowContent, DataTable },
+  components: { ShadowContent, DataTable, ImageViewer },
   data () {
     return {
+      images: [
+        'https://picsum.photos/200/200',
+        'https://picsum.photos/300/200',
+        'https://picsum.photos/250/200'
+      ],
+
       notificationHeaders: [
         {
           text: 'Bildirim',

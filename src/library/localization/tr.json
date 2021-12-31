@@ -51,6 +51,8 @@
   "label_total": "Toplam",
   "label_add-row": "Sıra Ekle",
   "label_submit": "Gönder",
+  "label_login": "Giriş yap",
+  "label_forgot-password": "Şifremi unuttum",
 
   "label_name": "Kullanıcı Adı",
   "label_enterprisename": "Kurumsal Adı",

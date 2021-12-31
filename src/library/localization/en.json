@@ -48,6 +48,8 @@
   "label_total": "Total",
   "label_add-row": "Add Row",
   "label_submit": "Submit",
+  "label_login": "Login",
+  "label_forgot-password": "Forgot Password",
 
   "label_name": "Username",
   "label_enterprisename": "Enterprise Name",

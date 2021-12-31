@@ -356,3 +356,7 @@ input[type='number'] {
     padding: 0 17px;
   }
 }
+
+#image-sample h4 {
+  margin-bottom: 20px;
+}
