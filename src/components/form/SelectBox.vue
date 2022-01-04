@@ -16,6 +16,7 @@
       :class="isSmaller ? 'smaller-select' : ''"
       :selectedItemValue="selectedItemValue"
     />
+    <span v-if="isError" class="v-messages error--text">{{ errorText }}</span>
   </div>
 </template>
 <script>
@@ -64,6 +65,14 @@ export default {
     selectedItemValue: {
       type: [String, Number],
       default: -1
+    },
+    isError: {
+      type: Boolean,
+      default: false
+    },
+    errorText: {
+      type: String,
+      default: ''
     }
   },
   data () {

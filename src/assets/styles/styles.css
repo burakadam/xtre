@@ -360,3 +360,11 @@ input[type='number'] {
 #image-sample h4 {
   margin-bottom: 20px;
 }
+
+.text-danger {
+  color: var(--danger);
+}
+
+.v-messages.error--text {
+  margin-top: 8px;
+}

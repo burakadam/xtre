@@ -40,7 +40,6 @@
         <div class="two-sides__right__item">
           <h4 class="fxs">{{ this.GetLabel(this, 'date') }}</h4>
           <div class="d-flex">
-          
             <SelectBox
               :items="days"
               itemText="name"
@@ -55,7 +54,6 @@
               isSmaller
               :selectedItemValue="1"
             />
-            
           </div>
         </div>
       </div>
@@ -142,6 +140,8 @@
               itemText="name"
               itemVelue="id"
               class="w-52p"
+              :isError="true"
+              errorText="Error text example"
               :defaultValue="{
                 name: 'TRY',
                 id: 1
