@@ -13,7 +13,9 @@
       :id="id"
       :items="items"
       :selectedValue="selectedValue"
-      :class="isSmaller ? 'smaller-select' : ''"
+      :class="`${isSmaller ? 'smaller-select' : ''} ${
+        isError ? 'error--text' : ''
+      }`"
       :selectedItemValue="selectedItemValue"
     />
     <span v-if="isError" class="v-messages error--text">{{ errorText }}</span>

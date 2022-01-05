@@ -368,3 +368,13 @@ input[type='number'] {
 .v-messages.error--text {
   margin-top: 8px;
 }
+
+.v-application
+  .error--text
+  .select2-container--default
+  .select2-selection--single,
+.error--text .v-input__slot,
+.x-date-picker.error--text > div,
+.error--text .v-input__slot {
+  border: 1px solid var(--danger) !important;
+}
