@@ -146,6 +146,16 @@
 
 .day-box.form:nth-of-type(6) ~ .day-box.form .ts-form {
   float: right;
+  flex-direction: row-reverse;
+}
+
+.day-box.form:nth-of-type(6) ~ .day-box.form .ts-form .ts-form__text {
+  margin-left: 0;
+  margin-right: 10px;
+}
+
+.day-box.form:nth-of-type(6) ~ .day-box.form .ts-form .ts-form__text + button {
+  right: 50px;
 }
 
 .day-box.form.active {
