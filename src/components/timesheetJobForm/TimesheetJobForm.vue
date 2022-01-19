@@ -6,9 +6,14 @@
     <div class="ts-form__text">
       <v-text-field :value="title" />
     </div>
-    <v-btn icon x-small class="ts-form-delete">
-      <i class="fa fa-trash"></i>
-    </v-btn>
+    <div class="ts-form-button-box">
+      <v-btn icon x-small class="ts-form-edit">
+        <i class="fa fa-edit"></i>
+      </v-btn>
+      <v-btn icon x-small class="ts-form-delete">
+        <i class="fa fa-trash"></i>
+      </v-btn>
+    </div>
   </div>
 </template>
 <script>
