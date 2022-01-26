@@ -39,6 +39,9 @@
           />
         </div>
         <div class="two-sides__right__item">
+          <v-btn outlined icon>
+            <i class="fas fa-chevron-left"></i>
+          </v-btn>
           <p class="fxs">{{ this.GetLabel(this, 'date') }}</p>
           <div class="d-flex">
             <SelectBox
@@ -56,6 +59,10 @@
               :selectedItemValue="1"
             />
           </div>
+          <v-btn outlined icon>
+            <i class="fas fa-chevron-right"></i>
+          </v-btn>
+
         </div>
       </div>
     </div>

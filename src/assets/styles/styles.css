@@ -254,6 +254,20 @@ input[type='number'] {
   -moz-appearance: textfield;
 }
 
+.two-sides__right button {
+  height: 27px !important;
+}
+
+.two-sides__right button.v-btn--icon {
+  width: 27px !important;
+  margin: 0 5px;
+}
+
+.two-sides__right button.v-btn--icon i {
+  font-size: 10px;
+  color: var(--greyDark);
+}
+
 @media screen and (max-width: 1500px) {
   body {
     margin: var(--sxxl);
